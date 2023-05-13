@@ -26,6 +26,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -44,6 +47,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2MHIr1mQNdnZvj40aq2TRUUwoLJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -292,7 +298,7 @@
       <workItem from="1683737269019" duration="662000" />
       <workItem from="1683738133373" duration="2243000" />
       <workItem from="1683781089624" duration="98000" />
-      <workItem from="1683789108884" duration="15754000" />
+      <workItem from="1683789108884" duration="16055000" />
     </task>
     <servers />
   </component>
