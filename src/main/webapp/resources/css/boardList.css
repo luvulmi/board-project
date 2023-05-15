@@ -5,6 +5,10 @@
     font-family: "Noto Sans KR", sans-serif;
 }
 
+body {
+    min-width: 800px;
+}
+
 a {
     text-decoration: none;
     color: black;
