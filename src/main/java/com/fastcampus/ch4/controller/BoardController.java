@@ -14,6 +14,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,6 +26,53 @@ import java.util.Map;
 public class BoardController {
   @Autowired
   BoardService boardService;
+
+  @PostMapping("/modify")
+  public String modify(BoardDto boardDto, Integer page, Integer pageSize, RedirectAttributes rattr, Model m, HttpSession session){
+    String writer = (String)session.getAttribute("id");
+    boardDto.setWriter(writer);
+    try {
+      if (boardService.modify(boardDto)!= 1)
+        throw new Exception("Modify failed.");
+
+      rattr.addAttribute("page", page);
+      rattr.addAttribute("pageSize", pageSize);
+      rattr.addFlashAttribute("msg", "MOD_OK");
+      return "redirect:/board/list";
+    } catch (Exception e) {
+      e.printStackTrace();
+      m.addAttribute(boardDto);
+      m.addAttribute("page", page);
+      m.addAttribute("pageSize", pageSize);
+      m.addAttribute("msg", "MOD_ERR");
+      return "board"; // 등록하려던 내용을 보여줘야 함.
+    }
+  }
+
+  @GetMapping("/write")
+  public String write(Model m) {
+    m.addAttribute("mode","new");
+    return "board"; // 읽기와 쓰기에 사용. 쓰기에 사용할 때는 mode=new
+  }
+
+  @PostMapping("/write")  // insert니까 delete인 remove하고 동일
+  public String write(BoardDto boardDto, RedirectAttributes rattr, Model m, HttpSession session) {
+    String writer = (String)session.getAttribute("id");
+    boardDto.setWriter(writer);
+
+    try {
+      if (boardService.write(boardDto) != 1)
+        throw  new Exception("Write failed.");
+      rattr.addFlashAttribute("msg", "WRT_OK");
+      return "redirect:/board/list";
+    } catch (Exception e) {
+       e.printStackTrace();
+      m.addAttribute("mode", "new");
+      m.addAttribute(boardDto);
+      m.addAttribute("msg","WRT,ERR");
+      return "board";
+    }
+  }
 
   @PostMapping("/remove")
   public String remove(Integer bno, Integer page,Integer pageSize,RedirectAttributes rattr, HttpSession session) {
@@ -78,6 +128,9 @@ public class BoardController {
       List<BoardDto> list = boardService.getPage(map);
       m.addAttribute("list", list);
       m.addAttribute("ph",pageHandler);
+
+      Instant startOfToday = LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant();
+      m.addAttribute("startOfToday", startOfToday.toEpochMilli());
     } catch (Exception e) {
       e.printStackTrace();
     }

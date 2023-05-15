@@ -11,6 +11,7 @@
   <title>fastcampus</title>
   <link rel="stylesheet" href="<c:url value='/css/menu.css'/>">
   <link rel="stylesheet" href="<c:url value='/css/boardList.css'/>">
+  <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
 </head>
 <body>
 <div id="menu">

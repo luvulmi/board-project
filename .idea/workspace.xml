@@ -9,12 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="559715f8-09d4-4cdc-8df9-70609bdff0f4" name="Changes" comment="230513 게시판 페이징처리">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board.jsp" afterDir="false" />
+    <list default="true" id="559715f8-09d4-4cdc-8df9-70609bdff0f4" name="Changes" comment="230515 게시판 읽기(R), 삭제(D) 구현">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/board.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ch4.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/boardList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/boardList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/boardList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/boardList.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,7 +325,7 @@
       <workItem from="1683781089624" duration="98000" />
       <workItem from="1683789108884" duration="16055000" />
       <workItem from="1683994327289" duration="866000" />
-      <workItem from="1684128999646" duration="5691000" />
+      <workItem from="1684128999646" duration="11869000" />
     </task>
     <task id="LOCAL-00001" summary="230513 게시판 페이징처리">
       <created>1683994360623</created>
@@ -334,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683994360623</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="230515 게시판 읽기(R), 삭제(D) 구현">
+      <created>1684136723376</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684136723376</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +349,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="230513 게시판 페이징처리" />
-    <option name="LAST_COMMIT_MESSAGE" value="230513 게시판 페이징처리" />
+    <MESSAGE value="230515 게시판 읽기(R), 삭제(D) 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="230515 게시판 읽기(R), 삭제(D) 구현" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

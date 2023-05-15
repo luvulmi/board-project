@@ -11,7 +11,7 @@
   <meta charset="UTF-8">
   <title>fastcampus</title>
   <link rel="stylesheet" href="<c:url value='/css/menu.css'/>">
-  <link rel="stylesheet" href="<c:url value='/css/boardList.css'/>">
+  <link rel="stylesheet" href="<c:url value='/css/board.css'/>">
   <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
 </head>
 <body>
@@ -36,23 +36,81 @@
   if(msg=="WRT_OK")    alert("성공적으로 등록되었습니다.");
   if(msg=="MOD_OK")    alert("성공적으로 수정되었습니다.");
 </script>
-<div style="text-align:center">
-  <div class="board-container">
-    <h2>게시물 읽기</h2>
-    <form action="" id="form">
-      <input type="text" name="bno" value="${boardDto.bno}" readonly="readonly">
-      <input type="text" name="title" value="${boardDto.title}" readonly="readonly">
-      <textarea name="content" id="" cols="30" rows="10" readonly="readonly">${boardDto.content}</textarea>
-      <button type="button" id="writeBtn" class="btn">등록</button>
-      <button type="button" id="modifyBtn" class="btn">수정</button>
-      <button type="button" id="removeBtn" class="btn">삭제</button>
-      <button type="button" id="listBtn" class="btn">목록</button>
-    </form>
-  </div>
+<div class="container">
+  <h2 class="writing-header">게시판 ${mode=="new" ? "글쓰기" : "읽기"}</h2>
+  <form id="form" class="frm" action="" method="post">
+    <input type="hidden" name="bno" value="${boardDto.bno}">
+
+    <input name="title" type="text" value="${boardDto.title}" placeholder="  제목을 입력해 주세요." ${mode=="new" ? "" : "readonly='readonly'"}><br>
+    <textarea name="content" rows="20" placeholder=" 내용을 입력해 주세요." ${mode=="new" ? "" : "readonly='readonly'"}>${boardDto.content}</textarea><br>
+
+<%--    mode에 담긴 변수명이 new라면 --%>
+    <c:if test="${mode eq 'new'}">
+      <button type="button" id="writeBtn" class="btn btn-write"><i class="fa fa-pencil"></i> 등록</button>
+    </c:if>
+    <c:if test="${mode ne 'new'}">
+      <button type="button" id="writeNewBtn" class="btn btn-write"><i class="fa fa-pencil"></i> 글쓰기</button>
+    </c:if>
+    <c:if test="${boardDto.writer eq loginId}">
+      <button type="button" id="modifyBtn" class="btn btn-modify"><i class="fa fa-edit"></i> 수정</button>
+      <button type="button" id="removeBtn" class="btn btn-remove"><i class="fa fa-trash"></i> 삭제</button>
+    </c:if>
+    <button type="button" id="listBtn" class="btn btn-list"><i class="fa fa-bars"></i> 목록</button>
+  </form>
+</div>
   <script>
     $(document).ready(function () {
+      let formCheck = function() {
+        let form = document.getElementById("form");
+        if(form.title.value=="") {
+          alert("제목을 입력해 주세요.");
+          form.title.focus();
+          return false;
+        }
+
+        if(form.content.value=="") {
+          alert("내용을 입력해 주세요.");
+          form.content.focus();
+          return false;
+        }
+        return true;
+      }
+
+      $("#writeNewBtn").on("click", function(){
+        location.href="<c:url value='/board/write'/>";
+      });
+
+      $("#writeBtn").on("click", function(){
+        let form = $("#form");
+        form.attr("action", "<c:url value='/board/write'/>");
+        form.attr("method", "post");
+
+        if(formCheck())
+          form.submit();
+      });
+
       $("#listBtn").on("click", function(){
         location.href="<c:url value='/board/list?page=${page}&pageSize=${pageSize}'/>";
+      });
+
+      $("#modifyBtn").on("click", function(){
+        let form = $("#form");
+        let isReadonly = $("input[name=title]").attr('readonly');
+
+        // 1. 읽기 상태이면, 수정 상태로 변경
+        if(isReadonly=='readonly') {
+          $(".writing-header").html("게시판 수정");
+          $("input[name=title]").attr('readonly', false);
+          $("textarea").attr('readonly', false);
+          $("#modifyBtn").html("<i class='fa fa-pencil'></i> 등록");
+          return;
+        }
+
+        // 2. 수정 상태이면, 수정된 내용을 서버로 전송
+        form.attr("action", "<c:url value='/board/modify?page=${page}&pageSize=${pageSize}'/>");
+        form.attr("method", "post");
+        if(formCheck())
+          form.submit();
       });
 
       $("#removeBtn").on("click", function(){
@@ -62,8 +120,8 @@
         form.attr("method","post");
         form.submit();
       });
+
     });
   </script>
-</div>
 </body>
 </html>
