@@ -44,6 +44,21 @@
         LIMIT #{offset}, #{pageSize} -- map에다 두개의 값. offset : 출력할 게시물 수 pageSize : 한 페이지 크기
     </select>
 
+    <select id="searchSelectPage" parameterType="SearchCondition" resultType="BoardDto">
+        <include refid="selectFromBoard"/>
+        WHERE true
+        AND title LIKE concat('%', #{keyword}, '%')
+        ORDER BY reg_date DESC, bno DESC
+        LIMIT #{offset}, #{pageSize} -- map에다 두개의 값. offset : 출력할 게시물 수 pageSize : 한 페이지 크기
+    </select>
+
+    <select id="searchResultCnt" parameterType="SearchCondition" resultType="int">
+        select count(*)
+        from board
+        WHERE true
+        AND title LIKE concat('%', #{keyword}, '%')
+    </select>
+
     <update id="update" parameterType="BoardDto">
         UPDATE board
         SET   title = #{title}
