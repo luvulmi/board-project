@@ -22,7 +22,7 @@ public class BoardDaoImplTest {
   public void searchSelectPageTest() throws Exception {
     boardDao.deleteAll();
     for (int i = 1; i <= 20 ; i++) {
-      BoardDto boardDto = new BoardDto("title"+i,"내용이다","asdf");
+      BoardDto boardDto = new BoardDto("title"+i,"내용이다","asdf"+i);
       boardDao.insert(boardDto);
     }
 
@@ -30,13 +30,18 @@ public class BoardDaoImplTest {
     List<BoardDto> list = boardDao.searchSelectPage(sc);
     System.out.println("list = " + list);
     assertTrue(list.size()==2); // 1~20 중 title2, title20
+
+    sc = new SearchCondition(1, 10, "asdf2", "W");
+    list = boardDao.searchSelectPage(sc);
+    System.out.println("list = " + list);
+    assertTrue(list.size()==2); // 1~20 중 asdf2, asdf20
   }
 
   @Test
   public void searchResultCntTest() throws Exception {
     boardDao.deleteAll();
     for (int i = 1; i <= 20 ; i++) {
-      BoardDto boardDto = new BoardDto("title"+i,"내용이다","asdf");
+      BoardDto boardDto = new BoardDto("title"+i,"내용이다","asdf"+i);
       boardDao.insert(boardDto);
     }
 
@@ -44,6 +49,11 @@ public class BoardDaoImplTest {
     int cnt = boardDao.searchResultCnt(sc);
     System.out.println("cnt = " + cnt);
     assertTrue(cnt==2); // 1~20 중 title2, title20
+
+    sc = new SearchCondition(1, 10, "asdf2", "W");
+    cnt = boardDao.searchResultCnt(sc);
+    System.out.println("cnt = " + cnt);
+    assertTrue(cnt==2); // 1~20 중 asdf2, asdf20
   }
 
   @Test

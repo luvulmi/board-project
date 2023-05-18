@@ -44,20 +44,6 @@
         LIMIT #{offset}, #{pageSize} -- map에다 두개의 값. offset : 출력할 게시물 수 pageSize : 한 페이지 크기
     </select>
 
-    <select id="searchSelectPage" parameterType="SearchCondition" resultType="BoardDto">
-        <include refid="selectFromBoard"/>
-        WHERE true
-        AND title LIKE concat('%', #{keyword}, '%')
-        ORDER BY reg_date DESC, bno DESC
-        LIMIT #{offset}, #{pageSize} -- map에다 두개의 값. offset : 출력할 게시물 수 pageSize : 한 페이지 크기
-    </select>
-
-    <select id="searchResultCnt" parameterType="SearchCondition" resultType="int">
-        select count(*)
-        from board
-        WHERE true
-        AND title LIKE concat('%', #{keyword}, '%')
-    </select>
 
     <update id="update" parameterType="BoardDto">
         UPDATE board
@@ -79,4 +65,35 @@
         WHERE bno = #{bno}
     </update>
 
+<!--    검색 기능 -->
+    <sql id="searchCondition">
+        <choose>
+            <when test='option=="T"'>
+                AND title LIKE concat('%', #{keyword}, '%')
+            </when>
+            <when test='option=="W"'>
+                AND writer LIKE concat('%', #{keyword}, '%')
+            </when>
+            <otherwise>
+                AND (title   LIKE concat('%', #{keyword}, '%')
+                OR   content LIKE concat('%', #{keyword}, '%'))
+            </otherwise>
+        </choose>
+    </sql>
+
+    <select id="searchSelectPage" parameterType="SearchCondition" resultType="BoardDto">
+        SELECT bno, title, content, writer, view_cnt, comment_cnt, reg_date
+        FROM  board
+        WHERE true
+        <include refid="searchCondition"/>
+        ORDER BY reg_date DESC, bno DESC
+        LIMIT #{offset}, #{pageSize}
+    </select>
+
+    <select id="searchResultCnt" parameterType="SearchCondition" resultType="int">
+        SELECT count(*)
+        FROM  board
+        WHERE true
+        <include refid="searchCondition"/>
+    </select>
 </mapper>
