@@ -9,24 +9,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="559715f8-09d4-4cdc-8df9-70609bdff0f4" name="Changes" comment="230516 게시판 글쓰기(C), 수정(U) 구현">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bgee_log4jdbc_log4j2_log4jdbc_log4j2_jdbc4_1_1_16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/domain/SearchCondition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4jdbc.log4j2.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+    <list default="true" id="559715f8-09d4-4cdc-8df9-70609bdff0f4" name="Changes" comment="230516 게시판 검색기능 추가 ver1">
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/ch4_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ch4_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ch4.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/board.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/dao/BoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/dao/BoardDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/dao/BoardDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/dao/BoardDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/boardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/boardMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/fastcampus/ch4/dao/BoardDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fastcampus/ch4/dao/BoardDaoImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/domain/PageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/domain/PageHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/domain/SearchCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/domain/SearchCondition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/service/BoardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/service/BoardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/boardList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/boardList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fastcampus/ch4/domain/PageHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fastcampus/ch4/domain/PageHandlerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,11 +44,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
   </component>
@@ -104,7 +101,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "settings.editor.selected.configurable": "spring",
-    "spring.configuration.checksum": "3ee3610c5d928069e7658a07faacb839",
+    "spring.configuration.checksum": "1145f263256c923716d2b8eade2f6689",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -141,9 +138,9 @@
   <component name="RunDashboard">
     <option name="openRunningConfigInTab" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.BoardDaoImplTest.searchResultCntTest">
+  <component name="RunManager" selected="Tomcat 서버.Tomcat 9.0.70">
     <configuration name="BoardDaoImplTest.insertData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ch4" />
+      <module name="board" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.fastcampus.ch4.dao.*" />
@@ -159,7 +156,7 @@
       </method>
     </configuration>
     <configuration name="BoardDaoImplTest.searchResultCntTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ch4" />
+      <module name="board" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.fastcampus.ch4.dao.*" />
@@ -175,7 +172,7 @@
       </method>
     </configuration>
     <configuration name="BoardDaoImplTest.searchSelectPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ch4" />
+      <module name="board" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.fastcampus.ch4.dao.*" />
@@ -191,7 +188,7 @@
       </method>
     </configuration>
     <configuration name="BoardDaoImplTest.updateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ch4" />
+      <module name="board" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.fastcampus.ch4.dao.*" />
@@ -207,7 +204,7 @@
       </method>
     </configuration>
     <configuration name="PageHandlerTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ch4" />
+      <module name="board" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.fastcampus.ch4.domain.*" />
@@ -340,7 +337,9 @@
       <workItem from="1683781089624" duration="98000" />
       <workItem from="1683789108884" duration="16055000" />
       <workItem from="1683994327289" duration="866000" />
-      <workItem from="1684128999646" duration="15867000" />
+      <workItem from="1684128999646" duration="15936000" />
+      <workItem from="1684300664426" duration="542000" />
+      <workItem from="1684304408787" duration="3413000" />
     </task>
     <task id="LOCAL-00001" summary="230513 게시판 페이징처리">
       <created>1683994360623</created>
@@ -363,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684162838609</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="230516 게시판 검색기능 추가 ver1">
+      <created>1684221306233</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684221306233</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,7 +379,8 @@
     <MESSAGE value="230513 게시판 페이징처리" />
     <MESSAGE value="230515 게시판 읽기(R), 삭제(D) 구현" />
     <MESSAGE value="230516 게시판 글쓰기(C), 수정(U) 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="230516 게시판 글쓰기(C), 수정(U) 구현" />
+    <MESSAGE value="230516 게시판 검색기능 추가 ver1" />
+    <option name="LAST_COMMIT_MESSAGE" value="230516 게시판 검색기능 추가 ver1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
