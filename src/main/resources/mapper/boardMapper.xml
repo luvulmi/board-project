@@ -41,9 +41,8 @@
     <select id="selectPage" parameterType="map" resultType="BoardDto">
         <include refid="selectFromBoard"/>
         ORDER BY reg_date DESC, bno DESC
-        LIMIT #{offset}, #{pageSize} -- map에다 두개의 값. offset : 출력할 게시물 수 pageSize : 한 페이지 크기
+        LIMIT #{offset}, #{pageSize}
     </select>
-
 
     <update id="update" parameterType="BoardDto">
         UPDATE board
@@ -65,7 +64,6 @@
         WHERE bno = #{bno}
     </update>
 
-<!--    검색 기능 -->
     <sql id="searchCondition">
         <choose>
             <when test='option=="T"'>

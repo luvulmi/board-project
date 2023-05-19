@@ -941,96 +941,143 @@ springbasic|schema||yulmi123|localhost|UPDATE|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb3_general_ci</CollationName>
     </table>
-    <table id="293" parent="290" name="user_info">
+    <table id="293" parent="290" name="comment">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb3_general_ci</CollationName>
     </table>
-    <column id="294" parent="292" name="bno">
-      <AutoIncrement>1</AutoIncrement>
+    <table id="294" parent="290" name="user_info">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb3_general_ci</CollationName>
+    </table>
+    <column id="295" parent="292" name="bno">
+      <AutoIncrement>491</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="295" parent="292" name="title">
+    <column id="296" parent="292" name="title">
       <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="296" parent="292" name="content">
+    <column id="297" parent="292" name="content">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="297" parent="292" name="writer">
+    <column id="298" parent="292" name="writer">
       <DasType>varchar(30)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="298" parent="292" name="view_cnt">
+    <column id="299" parent="292" name="view_cnt">
       <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>5</Position>
     </column>
-    <column id="299" parent="292" name="comment_cnt">
+    <column id="300" parent="292" name="comment_cnt">
       <DasType>int|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>6</Position>
     </column>
-    <column id="300" parent="292" name="reg_date">
+    <column id="301" parent="292" name="reg_date">
       <DasType>datetime|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>7</Position>
     </column>
-    <column id="301" parent="292" name="up_date">
+    <column id="302" parent="292" name="up_date">
       <DasType>datetime|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>8</Position>
     </column>
-    <index id="302" parent="292" name="PRIMARY">
+    <index id="303" parent="292" name="PRIMARY">
       <ColNames>bno</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="303" parent="292" name="PRIMARY">
+    <key id="304" parent="292" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="304" parent="293" name="id">
+    <column id="305" parent="293" name="cno">
+      <AutoIncrement>2</AutoIncrement>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="306" parent="293" name="bno">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="307" parent="293" name="pcno">
+      <DasType>int|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="308" parent="293" name="comment">
+      <DasType>varchar(3000)|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="309" parent="293" name="commenter">
+      <DasType>varchar(30)|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="310" parent="293" name="reg_date">
+      <DasType>datetime|0s</DasType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <Position>6</Position>
+    </column>
+    <column id="311" parent="293" name="up_date">
+      <DasType>datetime|0s</DasType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <Position>7</Position>
+    </column>
+    <index id="312" parent="293" name="PRIMARY">
+      <ColNames>cno</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="313" parent="293" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="314" parent="294" name="id">
       <DasType>varchar(30)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="305" parent="293" name="pwd">
+    <column id="315" parent="294" name="pwd">
       <DasType>varchar(50)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="306" parent="293" name="name">
+    <column id="316" parent="294" name="name">
       <DasType>varchar(30)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="307" parent="293" name="email">
+    <column id="317" parent="294" name="email">
       <DasType>varchar(30)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="308" parent="293" name="birth">
+    <column id="318" parent="294" name="birth">
       <DasType>date|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="309" parent="293" name="sns">
+    <column id="319" parent="294" name="sns">
       <DasType>varchar(30)|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="310" parent="293" name="reg_date">
+    <column id="320" parent="294" name="reg_date">
       <DasType>datetime|0s</DasType>
       <Position>7</Position>
     </column>
-    <index id="311" parent="293" name="PRIMARY">
+    <index id="321" parent="294" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="312" parent="293" name="PRIMARY">
+    <key id="322" parent="294" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

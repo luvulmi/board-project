@@ -9,13 +9,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="559715f8-09d4-4cdc-8df9-70609bdff0f4" name="Changes" comment="230518 게시판 검색기능 추가 ver2">
+    <list default="true" id="559715f8-09d4-4cdc-8df9-70609bdff0f4" name="Changes" comment="230518 게시판 검색기능 추가 완료">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/board_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/board_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_5_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_5_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/controller/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/controller/SimpleRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/dao/CommentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/dao/CommentDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/domain/CommentDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/domain/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/service/CommentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/commentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ajax.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/test.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/fastcampus/ch4/service/CommentServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cd1bf14e-b362-47c5-bc52-b4311e75842a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cd1bf14e-b362-47c5-bc52-b4311e75842a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/domain/SearchCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/domain/SearchCondition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/board.iml" beforeDir="false" afterPath="$PROJECT_DIR$/board.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/dao/BoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/dao/BoardDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/dao/BoardDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastcampus/ch4/dao/BoardDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/boardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/boardMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/boardList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/boardList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/fastcampus/ch4/dao/BoardDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fastcampus/ch4/dao/BoardDaoImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,10 +44,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 Test Class" />
-        <option value="Interface" />
-        <option value="Jsp File" />
         <option value="CSS File" />
+        <option value="Jsp File" />
+        <option value="Interface" />
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -77,31 +96,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/springjungsuk/ch4/src/main/java/com/fastcampus/ch4&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/springjungsuk/ch4/src/main/webapp/WEB-INF/views&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;spring&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;1145f263256c923716d2b8eade2f6689&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
+    "last_directory_selection": "C:/springjungsuk/ch4/src/main/java/com/fastcampus/ch4",
+    "last_opened_file_path": "C:/springjungsuk/ch4/src/main/webapp/WEB-INF/views",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "spring",
+    "spring.configuration.checksum": "1145f263256c923716d2b8eade2f6689",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.fastcampus.ch4.domain" />
@@ -109,6 +128,7 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\springjungsuk\ch4\src\main\webapp\WEB-INF\views" />
+      <recent name="C:\springjungsuk\ch4\src\main\resources\mapper" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -122,16 +142,20 @@
       <recent name="com.fastcampus.ch4.service" />
       <recent name="com.fastcampus.ch4.dao" />
     </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.fastcampus.ch4.domain" />
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.fastcampus.ch4.dao" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.fastcampus.ch4.service" />
+      <recent name="com.fastcampus.ch4.dao" />
+      <recent name="com.fastcampus.ch4.domain" />
     </key>
   </component>
   <component name="RunDashboard">
     <option name="openRunningConfigInTab" value="true" />
   </component>
   <component name="RunManager" selected="Tomcat 서버.Tomcat 9.0.70">
-    <configuration name="BoardDaoImplTest.insertData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BoardDaoImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="board" />
       <extension name="coverage">
         <pattern>
@@ -141,13 +165,12 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.fastcampus.ch4.dao" />
       <option name="MAIN_CLASS_NAME" value="com.fastcampus.ch4.dao.BoardDaoImplTest" />
-      <option name="METHOD_NAME" value="insertData" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BoardDaoImplTest.searchResultCntTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CommentDaoImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="board" />
       <extension name="coverage">
         <pattern>
@@ -156,14 +179,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.fastcampus.ch4.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.fastcampus.ch4.dao.BoardDaoImplTest" />
-      <option name="METHOD_NAME" value="searchResultCntTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.fastcampus.ch4.dao.CommentDaoImplTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BoardDaoImplTest.searchSelectPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CommentServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="board" />
       <extension name="coverage">
         <pattern>
@@ -171,15 +193,14 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.fastcampus.ch4.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.fastcampus.ch4.dao.BoardDaoImplTest" />
-      <option name="METHOD_NAME" value="searchSelectPage" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.fastcampus.ch4.service" />
+      <option name="MAIN_CLASS_NAME" value="com.fastcampus.ch4.service.CommentServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BoardDaoImplTest.searchSelectPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CommentServiceImplTest.remove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="board" />
       <extension name="coverage">
         <pattern>
@@ -187,25 +208,25 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.fastcampus.ch4.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.fastcampus.ch4.dao.BoardDaoImplTest" />
-      <option name="METHOD_NAME" value="searchSelectPageTest" />
+      <option name="PACKAGE_NAME" value="com.fastcampus.ch4.service" />
+      <option name="MAIN_CLASS_NAME" value="com.fastcampus.ch4.service.CommentServiceImplTest" />
+      <option name="METHOD_NAME" value="remove" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PageHandlerTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CommentServiceImplTest.write" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="board" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.fastcampus.ch4.domain.*" />
+          <option name="PATTERN" value="com.fastcampus.ch4.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.fastcampus.ch4.domain" />
-      <option name="MAIN_CLASS_NAME" value="com.fastcampus.ch4.domain.PageHandlerTest" />
-      <option name="METHOD_NAME" value="test3" />
+      <option name="PACKAGE_NAME" value="com.fastcampus.ch4.service" />
+      <option name="MAIN_CLASS_NAME" value="com.fastcampus.ch4.service.CommentServiceImplTest" />
+      <option name="METHOD_NAME" value="write" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -302,11 +323,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BoardDaoImplTest.searchResultCntTest" />
-        <item itemvalue="JUnit.BoardDaoImplTest.searchSelectPageTest" />
-        <item itemvalue="JUnit.BoardDaoImplTest.searchSelectPage" />
-        <item itemvalue="JUnit.PageHandlerTest.test3" />
-        <item itemvalue="JUnit.BoardDaoImplTest.insertData" />
+        <item itemvalue="JUnit.CommentServiceImplTest.write" />
+        <item itemvalue="JUnit.CommentServiceImplTest" />
+        <item itemvalue="JUnit.BoardDaoImplTest" />
+        <item itemvalue="JUnit.CommentServiceImplTest.remove" />
+        <item itemvalue="JUnit.CommentDaoImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -332,7 +353,9 @@
       <workItem from="1684128999646" duration="15936000" />
       <workItem from="1684300664426" duration="542000" />
       <workItem from="1684304408787" duration="3413000" />
-      <workItem from="1684421196067" duration="3678000" />
+      <workItem from="1684421196067" duration="3989000" />
+      <workItem from="1684432242268" duration="2109000" />
+      <workItem from="1684510948764" duration="9421000" />
     </task>
     <task id="LOCAL-00001" summary="230513 게시판 페이징처리">
       <created>1683994360623</created>
@@ -369,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684421252477</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="230518 게시판 검색기능 추가 완료">
+      <created>1684429474891</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684429474891</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,7 +411,8 @@
     <MESSAGE value="230516 게시판 글쓰기(C), 수정(U) 구현" />
     <MESSAGE value="230516 게시판 검색기능 추가 ver1" />
     <MESSAGE value="230518 게시판 검색기능 추가 ver2" />
-    <option name="LAST_COMMIT_MESSAGE" value="230518 게시판 검색기능 추가 ver2" />
+    <MESSAGE value="230518 게시판 검색기능 추가 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="230518 게시판 검색기능 추가 완료" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
